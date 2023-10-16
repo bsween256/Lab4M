@@ -38,6 +38,26 @@ public class BinaryTree<Integer> {
             right = null;
         }
 
+        /**
+         * Test method for the BTprinting class
+         */
+        public void testPrint(){
+
+        }
+
+        /**
+         * Test method for the searchBT class
+         */
+        public void testSearch(){
+
+        }
+
+        /**
+         * Test method for the aggregateBT class
+         */
+        public void testAgg(){
+
+        }
     }
 }
 
