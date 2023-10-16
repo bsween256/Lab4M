@@ -1,0 +1,47 @@
+public class aggregateBT extends BinaryTree<Integer> {
+	public int countEvenNumber() {
+        return countEvenNumber(root);
+    }
+
+    private int countEvenNumber(Node node) {
+        if (node == null) {
+            return 0;
+        }
+
+        int count = 0;
+        if (node.data % 2 == 0) {
+            count = 1;
+        }
+
+        return count + countEvenNumber(node.left) + countEvenNumber(node.right);
+    }
+    public int findSum() {
+        return findSum(root);
+    }
+
+    private int findSum(Node node) {
+        if (node == null) {
+            return 0;
+        }
+
+        return node.data + findSum(node.left) + findSum(node.right);
+    }
+    public static void main(String[] args) {
+    	int evenCount = countEvenNumber();
+        System.out.println("Number of even nodes" + evenCount);
+
+        int sum = findSum();
+        System.out.println("Sum of values:" + sum);
+    }
+    
+    @Overide
+    public void testAgg() {
+        int evenCount = countEvenNumber();
+        System.out.println("Number of even nodes" + evenCount);
+
+        int sum = findSum();
+        System.out.println("Sum of values:" + sum);
+     
+    }
+}
+}
